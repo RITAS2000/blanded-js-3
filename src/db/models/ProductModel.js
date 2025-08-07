@@ -10,6 +10,11 @@ const productSchema = new Schema(
       type: Number,
       required: true,
     },
+    userId: {
+      type: Schema.Types.ObjectId,
+      required: true,
+      ref: 'users',
+    },
     category: {
       type: String,
       enum: ['books', 'electronics', 'clothing', 'other'],
